@@ -22,12 +22,12 @@ class portalModeloAppServer extends simpleService {
         'attrs' => array(
           new SetAttribute (
             new IntAttribute ( 
-              _('Zope instance'), 
-              _('Zope instance for the Portal Modelo.'), 
-              'zopeInstance', 
+              _('Zope instance Group'), 
+              _('Zope instance Group for the Portal Modelo.'), 
+              'instanceGroup', 
               TRUE, 
-              8100, 
-              8199 
+              00, 
+              99 
               )
            )
         ),
