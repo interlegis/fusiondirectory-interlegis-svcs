@@ -1,10 +1,10 @@
 <?php
 /*
-  Portal Modelo Application Server Service
+  Portal Modelo Database Server Service
 */
 
-class portalModeloAppServer extends simpleService {
-  var $objectclasses = array('portalModeloAppServer');
+class portalModeloPrimaryDBServer extends simpleService {
+  var $objectclasses = array('portalModeloPrimaryDBServer');
 
   /* Construction */
   function __construct(&$config, $dn, $object = NULL)
@@ -18,7 +18,7 @@ class portalModeloAppServer extends simpleService {
     return array(
       // Attributes are grouped by section
       'main' => array(
-        'name'  => _('Portal Modelo Application Server'),
+        'name'  => _('Portal Modelo Primary Database Server'),
         'attrs' => array(
           new SetAttribute (
             new IntAttribute ( 
@@ -39,8 +39,8 @@ class portalModeloAppServer extends simpleService {
   static function plInfo ()
   {
     return array(
-      "plShortName"       => _("Portal Modelo App Server"),
-      "plDescription"     => _("This service allows you to configure a Portal Modelo Application Server"),
+      "plShortName"       => _("Portal Modelo Primary DB"),
+      "plDescription"     => _("This service allows you to configure a Portal Modelo Primary Database Server"),
       "plIcon"            => "plugins/interlegis/images/iconMiniPortalModelo.png",
       "plProvidedAcls"    => parent::generatePlProvidedAcls(self::getAttributesInfo())
     );

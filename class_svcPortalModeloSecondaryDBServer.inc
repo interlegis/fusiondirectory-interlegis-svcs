@@ -3,8 +3,8 @@
   Portal Modelo Database Server Service
 */
 
-class portalModeloDBServer extends simpleService {
-  var $objectclasses = array('portalModeloDBServer');
+class portalModeloSecondaryDBServer extends simpleService {
+  var $objectclasses = array('portalModeloSecondaryDBServer');
 
   /* Construction */
   function __construct(&$config, $dn, $object = NULL)
@@ -18,7 +18,7 @@ class portalModeloDBServer extends simpleService {
     return array(
       // Attributes are grouped by section
       'main' => array(
-        'name'  => _('Portal Modelo Database Server'),
+        'name'  => _('Portal Modelo Secondary Database Server'),
         'attrs' => array(
           new SetAttribute (
             new IntAttribute ( 
@@ -26,7 +26,7 @@ class portalModeloDBServer extends simpleService {
               _('Zope instance Group for the Portal Modelo.'), 
               'instanceGroup', 
               TRUE, 
-              00, 
+              0, 
               99 
               )
            )
@@ -39,8 +39,8 @@ class portalModeloDBServer extends simpleService {
   static function plInfo ()
   {
     return array(
-      "plShortName"       => _("Portal Modelo DB Server"),
-      "plDescription"     => _("This service allows you to configure a Portal Modelo Database Server"),
+      "plShortName"       => _("Portal Modelo Secondary DB"),
+      "plDescription"     => _("This service allows you to configure a Portal Modelo Secondary Database Server"),
       "plIcon"            => "plugins/interlegis/images/iconMiniPortalModelo.png",
       "plProvidedAcls"    => parent::generatePlProvidedAcls(self::getAttributesInfo())
     );
